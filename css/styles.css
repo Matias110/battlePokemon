@@ -1,0 +1,231 @@
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'Pokemon';
+  src: url("../fonts/pokemon-normal.woff2") format("woff2"), url("../fonts/pokemon-normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Pokemon';
+  src: url("../fonts/pokemon-italic.woff2") format("woff2"), url("../fonts/pokemon-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+/*------------------------------------*\
+    $EXTEND
+\*------------------------------------*/
+.stadium .depth .foe .status .hp-wrap .hp-dmg, .stadium .depth .trainer .status .hp-wrap .hp-dmg {
+  display: flex;
+  justify-content: space-between;
+  width: 7.8125em;
+  margin-left: 0.875em; }
+  .stadium .depth .foe .status .hp-wrap .hp-dmg > img, .stadium .depth .trainer .status .hp-wrap .hp-dmg > img {
+    width: 1.25em; }
+  .stadium .depth .foe .status .hp-wrap .hp-dmg .hp-bar, .stadium .depth .trainer .status .hp-wrap .hp-dmg .hp-bar {
+    position: relative;
+    border: 0.125em solid #2f3622;
+    border-radius: 0.25em;
+    height: 0.3125em;
+    width: 5.9375em;
+    top: -0.0625em; }
+    .stadium .depth .foe .status .hp-wrap .hp-dmg .hp-bar .hp-bar-active, .stadium .depth .trainer .status .hp-wrap .hp-dmg .hp-bar .hp-bar-active {
+      background-color: #7d7f4c;
+      height: 100%;
+      width: 100%;
+      border-radius: 0.25em; }
+.stadium .depth .foe .status .hp-wrap .hp-point, .stadium .depth .trainer .status .hp-wrap .hp-point {
+  width: 6.25em;
+  position: absolute;
+  right: 0.625em;
+  bottom: 0.375em;
+  display: flex;
+  justify-content: space-between; }
+  .stadium .depth .foe .status .hp-wrap .hp-point p, .stadium .depth .trainer .status .hp-wrap .hp-point p {
+    font-size: 1em; }
+.stadium .depth .foe .status .hp-wrap > img, .stadium .depth .trainer .status .hp-wrap > img {
+  width: 9.375em;
+  position: relative;
+  left: 0.3125em;
+  top: -0.625em; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bbac58;
+  color: #2f3622;
+  font-family: 'Pokemon', monospace;
+  margin: 0;
+  padding: 0; }
+
+::selection {
+  background: #4d5d31;
+  color: #bbac58; }
+
+.stadium {
+  position: relative;
+  width: 20em;
+  height: 18.75em; }
+  .stadium .depth {
+    width: 100%;
+    height: 12.5em;
+    position: relative;
+    overflow: hidden; }
+    .stadium .depth .foe .balls {
+      position: absolute;
+      top: 2.25em;
+      left: 1.875em;
+      width: 10em;
+      height: auto; }
+    .stadium .depth .foe .character {
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 7.1875em;
+      height: 7.1875em;
+      z-index: 2; }
+    .stadium .depth .foe .status {
+      position: absolute;
+      top: 0;
+      left: 1.5625em; }
+      .stadium .depth .foe .status .name {
+        font-size: 1em; }
+      .stadium .depth .foe .status .level-wrap {
+        width: 1.875em;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -0.125em;
+        left: 3.125em; }
+        .stadium .depth .foe .status .level-wrap img {
+          width: 0.625em; }
+        .stadium .depth .foe .status .level-wrap span {
+          font-size: 1em; }
+    .stadium .depth .foe .pokemon {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 7.1875em;
+      height: 7.1875em;
+      background: #bbac58;
+      z-index: 1;
+      overflow: hidden; }
+      .stadium .depth .foe .pokemon img {
+        position: relative; }
+    .stadium .depth .trainer .balls {
+      position: absolute;
+      right: 1.25em;
+      bottom: 0.0625em;
+      width: 10em;
+      height: auto; }
+    .stadium .depth .trainer .character {
+      position: absolute;
+      right: -60%;
+      bottom: 0;
+      width: 7.1875em;
+      height: 7.1875em;
+      z-index: 3; }
+    .stadium .depth .trainer .status {
+      position: absolute;
+      bottom: -0.5em;
+      right: 1.5625em; }
+      .stadium .depth .trainer .status .name {
+        font-size: 1em;
+        position: relative;
+        left: 1.5625em; }
+      .stadium .depth .trainer .status .level-wrap {
+        width: 1.875em;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -0.125em;
+        left: 5.625em; }
+        .stadium .depth .trainer .status .level-wrap img {
+          width: 0.625em; }
+        .stadium .depth .trainer .status .level-wrap span {
+          font-size: 1em; }
+    .stadium .depth .trainer .pokemon {
+      position: absolute;
+      right: 100%;
+      bottom: 0;
+      width: 7.1875em;
+      height: 7.1875em;
+      background: #bbac58; }
+      .stadium .depth .trainer .pokemon img {
+        position: relative; }
+  .stadium .windows {
+    border-image: url("../sprite/frame.svg") 45% stretch;
+    border-style: solid;
+    border-width: 0.875em;
+    height: 4.375em; }
+    .stadium .windows pre.write {
+      font-family: 'Pokemon';
+      src: url("fonts/pokemon-normal.woff2") format("woff2"), url("fonts/pokemon-normal.woff") format("woff");
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 180%;
+      font-style: normal; }
+    .stadium .windows .btn-arrow:hover {
+      cursor: pointer;
+      position: relative; }
+    .stadium .windows .btn-arrow:hover::after {
+      content: "";
+      position: absolute;
+      background: url("../sprite/marker.svg") no-repeat;
+      top: 0.125em;
+      left: -0.75em;
+      width: 0.75em;
+      height: 0.75em;
+      background-size: 0.5em; }
+    .stadium .windows .menu-select {
+      position: absolute;
+      right: 0;
+      bottom: 0.125em;
+      width: 10em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1.25em;
+      align-items: center;
+      padding: 0 0.625em;
+      background-color: #bbac58; }
+      .stadium .windows .menu-select span {
+        font-size: 1em; }
+        .stadium .windows .menu-select span sub, .stadium .windows .menu-select span sup {
+          font-size: 0.6em; }
+        .stadium .windows .menu-select span sub:nth-child(2) {
+          margin-left: -19px; }
+        .stadium .windows .menu-select span sup:nth-child(3) {
+          margin-left: -18px; }
+        .stadium .windows .menu-select span sub:nth-child(4) {
+          margin-left: -16px; }
+    .stadium .windows .menu-attack {
+      position: absolute;
+      right: 0;
+      bottom: 0.125em;
+      width: 10em;
+      display: flex;
+      background-color: #bbac58;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0.625em; }
+      .stadium .windows .menu-attack .type {
+        position: absolute;
+        right: 71%;
+        bottom: 105%;
+        width: 9.375em;
+        height: 3.4375em;
+        background: #bbac58;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .stadium .windows .menu-attack .type span {
+          font-size: 1em; }
+          .stadium .windows .menu-attack .type span:nth-child(2) {
+            margin-left: 0.9375em; }
+          .stadium .windows .menu-attack .type span:nth-child(3) {
+            margin-left: 4.375em; }
+
+/*# sourceMappingURL=styles.css.map */

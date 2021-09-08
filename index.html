@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content='ie=edge' http-equiv='x-ua-compatible'>
+		<title>BATTLE</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class='stadium'>
+			<div class="depth">
+				<div class="foe">
+					<div class="balls">
+						<img src="sprite/foe_balls.svg">
+					</div>
+					<div class="character">
+						<img src="sprite/foe_front.svg">
+					</div>
+					<div class="status">
+						<div class="name"></div>
+						<div class='level-wrap'>
+							<img src='sprite/level.svg'>
+							<span class='level'></span>
+						</div>
+						<div class='hp-wrap'>
+							<div class="hp-dmg">
+								<img src='sprite/hp.svg'>
+								<div class='hp-bar'>
+									<div class='hp-bar-active'></div>
+								</div>
+							</div>
+							<img src="sprite/foe_line.svg">
+						</div>
+					</div>
+					<div class="pokemon">
+						<img src="sprite/eevee_front.svg">
+					</div>
+				</div>
+				<div class="trainer">
+					<div class="balls">
+						<img src="sprite/trainer_balls.svg">
+					</div>
+					<div class="character">
+						<img src="sprite/trainer_back.svg">
+					</div>
+					<div class="status">
+						<div class="name"></div>
+						<div class='level-wrap'>
+							<img src='sprite/level.svg'>
+							<span class='level'></span>
+						</div>
+						<div class='hp-wrap'>
+							<div class="hp-dmg">
+								<img src='sprite/hp.svg'>
+								<div class='hp-bar'>
+									<div class='hp-bar-active'></div>
+								</div>
+							</div>
+							<div class="hp-point">
+								<p class="point">32</p>
+								<p> /</p>
+								<p>32</p>
+							</div>
+							<img src="sprite/trainer_line.svg">
+						</div>
+					</div>
+					<div class="pokemon">
+						<img src="sprite/pikachu_back.svg">
+					</div>
+				</div>
+			</div>
+			
+			<div class="windows">
+			<pre class="write"></pre>
+			<div class="windows menu-select">
+				<span class="btn-arrow">FIGHT</span>
+				<span class="btn-arrow hide">
+					<sup>P</sup>
+					<sub>K</sub>
+					<sup>M</sup>
+					<sub>N</sub>
+				</span>
+				<span class="btn-arrow">ITEM</span>
+				<span class="btn-arrow">RUN</span>
+			</div>
+			<div class="windows menu-attack">
+				<div class="windows type">
+					<span>TYPE/</span>
+					<span>NORMAL</span>
+					<span class="point-attack">35/35</span>
+				</div>
+				<span class="btn-arrow">TACKLE</span>
+				<span class="btn-arrow">TAIL WHIP</span>
+				<span>-</span>
+				<span>-</span>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
